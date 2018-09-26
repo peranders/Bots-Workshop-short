@@ -1,0 +1,33 @@
+query,topIntent
+How much money do I have in checking?,Balances
+How much money did I save last year?,Balances
+What’s my balance?,Balances
+How much do I owe on all my credit cards?,Balances
+What’s the current balance on my cc?,Balances
+How much money do I have in all of my accounts?,Balances
+What’s my available credit on my Visa?,Balances
+Pay Chase the minimum balance on the 15th of the month,Send Money
+Send $500 to Mom from Savings every month,Send Money
+Pay Cleo for rent on the 1st of every month using Paypal,Send Money
+I’d like to send Sasha $20 for lunch,Send Money
+Send a payment,Send Money
+Pay Lauren $15 for photos,Send Money
+What was my largest concert ticket?,Track Spending
+What was my largest Best Buy transaction?,Track Spending
+How much did I spend eating out last week?,Track Spending
+How much did I spend at Apple last year?,Track Spending
+How much did I spend on clothes in June?,Track Spending
+How much did I spend last weekend?,Track Spending
+What was my largest hotel transaction in 2015?,Track Spending
+What was my most expensive restaurant expense?,Track Spending
+What did I spend on food in London last month?,Track Spending
+How much did I spend on gas in October?,Track Spending
+How much did I spend on June 2nd?,Track Spending
+How much did I spend on Uber? Last month?,Track Spending
+How much did I spend on travel in March?,Track Spending
+How much did I spend on groceries last week?,Track Spending
+How much have I spent on restaurants in 2016?,Track Spending
+How much have I spent in 2016?,Track Spending
+How much have I spent at Philz Coffee?,Track Spending
+How much did I spend on gas last month?,Track Spending
+How much did I spend on gas using my Visa cc last week?,Track Spending
