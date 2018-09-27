@@ -1,0 +1,15 @@
+
+Backend ID       9e22b9fd-33bf-4586-891f-27f7ff4c8a9c
+
+
+
+Metadata URL	 https://4729E3515B9C460CB33579AEA6A8EF15.mobile.ocp.oraclecloud.com:443/mobile/custom/bots_samples/components
+
+
+
+
+Anonymous Key    NDcyOUUzNTE1QjlDNDYwQ0IzMzU3OUFFQTZBOEVGMTVfTW9iaWxlQW5vbnltb3VzX0FQUElEOmQ1MDcxMDFjLThjZjMtNDg3Yy04NjIxLTUzMDM5NWI0MjgyZA==
+
+
+
+
