@@ -1,0 +1,17 @@
+{
+  "name": "sampleServiceOMCe",
+  "version": "1.1.0",
+  "description": "Sample OMCe custom code components for demo bots",
+  "main": "mcebots.js",
+  "repository": {},
+  "license": "ISC",
+  "dependencies": {
+    "joi": "^9.2.0"
+  },
+  "oracleMobile": {
+    "dependencies": {
+      "apis": {},
+      "connectors": {}
+    }
+  }
+}

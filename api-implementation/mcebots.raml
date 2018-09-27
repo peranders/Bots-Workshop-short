@@ -1,0 +1,63 @@
+#%RAML 0.8
+# This RAML describes the Bots component service REST API contract.  
+# An MCe custom code API that implements this RAML will be a Bots component service.
+title: bots_samples
+version: 18.2.3
+baseUri: /mobile/custom/bots_samples
+protocols: [HTTPS]
+/components:
+  description: |
+    Components context root
+
+  get:
+    displayName: Metadata
+    description: |
+      Components metadata retrieval
+
+    protocols: [HTTPS]
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              {
+                "version": "1.1",
+                "components": [
+                  {
+                    "name": "AgeChecker",
+                    "properties": {
+                      "minAge": {
+                        "type": "integer",
+                        "required": true
+                      }
+                    },
+                    "supportedActions": [
+                      "allow",
+                      "block"
+                    ]
+                  }
+                ]
+              }
+
+  /{componentName}:
+    description: |
+      Component invocation
+
+    uriParameters:
+      componentName:
+        displayName: componentName
+        description: |
+          Name of the component
+
+        type: string
+        required: true
+    post:
+      description: |
+        Invoke the named component
+
+      body:
+        application/json:
+      responses:
+        200:
+          body:
+            application/json:

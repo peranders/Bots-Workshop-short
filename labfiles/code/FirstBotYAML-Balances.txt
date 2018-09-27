@@ -1,0 +1,43 @@
+metadata:
+  platformVersion: "1.0"
+main: true
+name: "FinancialBotMainFlow"
+context:
+  variables:
+    accountType: "AccountType"
+    iResult: "nlpresult"
+states:
+  intent:
+    component: "System.Intent"
+    properties:
+      variable: "iResult"
+      confidenceThreshold: 0.4
+    transitions:
+      actions:
+        Balances: "startBalances"
+        unresolvedIntent: "unresolved"
+  startBalances:
+    component: "System.SetVariable"
+    properties:
+      variable: "accountType"
+      value: "${iResult.value.entityMatches['AccountType'][0]}"
+    transitions: {}
+  askBalancesAccountType:
+    component: "System.List"
+    properties:
+      options: "${accountType.type.enumValues}"
+      prompt: "For which account do you want your balance?"
+      variable: "accountType"
+    transitions: {}
+  printBalance:
+    component: "System.Output"
+    properties:
+      text: "Balance for ${accountType.value} is $500"
+    transitions:
+      return: "printBalance"
+  unresolved:
+    component: "System.Output"
+    properties:
+      text: "Unable to resolve intent!"
+    transitions:
+      return: "unresolved"

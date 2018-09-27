@@ -1,0 +1,37 @@
+
+{
+    "apiName":"bots_samples",
+    "apiVersion":"18.2.3",
+    "apiId":"<YOUR_API_ID>",
+    "baseUrl":"<YOUR_BASEURL>",
+    "tokenEndpoint":"<YOUR_TOKEN_END_POINT>",
+    "backend":{
+        "backendId":"<YOUR_BACKEND_ID>",
+        "backendName":"<YOUR_BACKEND_NAME>",
+        "backendVersion":"<YOUR_BACKEND_VERSION>",
+        "authorization":{
+            "anonymousKey":"<BACKEND_ANONYMOUS_KEY>",
+            "clientId":"<BACKEND_CLIENT_ID>",
+            "clientSecret":"<BACKEND_CLIENT_SECRET>"
+        }
+    },
+    "tools":{
+        "deployment":{
+            "tempDirectory":"c:\\tmp\\mcs-deploy"
+        },
+        "authorization":{
+            "clientId":"<OMCE_TM_APP_CLIENT_ID>",
+            "clientSecret":"<OMCE_TM_APP_CLIENT_SECRET>"
+        }
+    },
+    "container":{
+        "oracleMobileApiName":"OracleMobileAPI",
+        "port":4000
+    },
+    "tests":{
+        "getComponents":{
+            "method":"GET",
+            "resource":"/components"
+        }
+    }
+}
