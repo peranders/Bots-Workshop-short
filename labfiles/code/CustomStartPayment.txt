@@ -1,0 +1,56 @@
+  startPayments:
+    component: "System.SetVariable"
+    properties:
+      variable: "accountType"
+      value: "${iResult.value.entityMatches['AccountType'][0]}"
+    transitions: {}
+  resolveToAccount:
+    component: "System.SetVariable"
+    properties:
+      variable: "toAccount"
+      value: "${iResult.value.entityMatches['ToAccount'][0]}"
+    transitions: {}
+  resolvePaymentAmount:
+    component: "SetVariableFromEntityMatches"
+    properties:
+      variable: "paymentAmount"
+      nlpVariable: "iResult"
+      entity: "CURRENCY"
+    transitions: {}
+  askFromAccountType:
+    component: "System.List"
+    properties:
+      options: "${accountType.type.enumValues}"
+      prompt: "From which account do you want to make a payment?"
+      variable: "accountType"
+    transitions: {}
+  askToAccount:
+    component: "System.List"
+    properties:
+      options: "${accountType.type.enumValues}"
+      prompt: "To which account do you want to make a payment?"
+      variable: "toAccount"
+    transitions: {}
+  checkPaymentAmount:
+    component: "System.ConditionEquals"
+    properties:
+      variable: "paymentAmount"
+      value: null
+    transitions:
+      actions:
+        equals: "askPaymentAmount"
+        notequals: "doPayment"
+  askPaymentAmount:
+    component: "System.Text"
+    properties:
+      prompt: "What's the payment amount?"
+      variable: "paymentAmount"
+    transitions: {}
+  doPayment:
+    component: "Payments"
+    properties:
+      fromAccountType: "${accountType.value}"
+      toAccount: "${toAccount.value}"
+      amount: "${paymentAmount.value.total_currency}"
+    transitions:
+      return: "doPayment"

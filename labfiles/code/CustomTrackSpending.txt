@@ -1,0 +1,15 @@
+  startTrackSpending:
+    component: "System.SetVariable"
+    properties:
+      variable: "spendingCategory"
+      value: "${iResult.value.entityMatches['TrackSpendingCategory'][0]}"
+    transitions: {}
+  showSpending:
+    component: "TrackSpending"
+    properties:
+      spendingCategory: "${spendingCategory.value}"
+      date: "${iResult.value.entityMatches['DATE'][0]}"
+      durationStart: "${iResult.value.entityMatches['DURATION'][0].startDate}"
+      durationEnd: "${iResult.value.entityMatches['DURATION'][0].endDate}"
+    transitions:
+      return: "showSpending"

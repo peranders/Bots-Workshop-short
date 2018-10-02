@@ -1,0 +1,6 @@
+printBalance:
+  component: "BalanceRetrieval"
+  properties:
+    accountType: "${accountType.value}"
+  transitions:
+    return: "printBalance"
