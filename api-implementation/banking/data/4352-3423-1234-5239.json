@@ -1,0 +1,66 @@
+[
+  {
+    "date": "2017-01-20T10:34:31Z",
+    "type": "payment",
+    "category": "billing cycle",
+    "description": "Payment for 01/15 billing cycle",
+    "fromAccountType": "credit card",
+    "amount": 230.45
+  },
+  {
+    "date": "2017-08-08T10:34:31Z",
+    "type": "debit",
+    "category": "travel",
+    "description": "LetsTravel",
+    "fromAccountType": "credit card",
+    "amount": -103.28
+  },
+  {
+    "date": "2017-08-23T10:34:31Z",
+    "type": "debit",
+    "category": "gas",
+    "description": "Gas2Go",
+    "fromAccountType": "credit card",
+    "amount": -8.25
+  },
+  {
+    "date": "2017-08-23T11:34:31Z",
+    "type": "debit",
+    "category": "restaurants",
+    "description": "PizzaUGotcha",
+    "fromAccountType": "credit card",
+    "amount": -60
+  },
+  {
+    "date": "2017-08-24T10:34:31Z",
+    "type": "credit",
+    "category": "restaurants",
+    "description": "PizzaUGotcha, refund",
+    "fromAccountType": "credit card",
+    "amount": 20
+  },
+  {
+    "date": "2017-08-30T10:34:31Z",
+    "type": "debit",
+    "category": "retail",
+    "description": "NextGenRetail",
+    "fromAccountType": "credit card",
+    "amount": -234
+  },
+  {
+    "date": "2017-09-07T12:34:31Z",
+    "type": "debit",
+    "category": "gas",
+    "description": "Gas2Go",
+    "fromAccountType": "credit card",
+    "amount": -45
+  },
+  {
+    "date": "2017-09-07T14:34:31Z",
+    "type": "debit",
+    "category": "uber",
+    "description": "Payment uber",
+    "fromAccountType": "credit card",
+    "amount": -8.8
+  }
+]
